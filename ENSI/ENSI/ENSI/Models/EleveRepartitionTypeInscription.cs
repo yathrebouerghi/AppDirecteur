@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace ENSI.Models;
+
+public partial class EleveRepartitionTypeInscription
+{
+    /// <summary>
+    /// Code établissement
+    /// </summary>
+    public string CodeEtab { get; set; } = null!;
+
+    /// <summary>
+    /// Année scolaire
+    /// </summary>
+    public int AnneScol { get; set; }
+
+    public string CodeTypeInsc { get; set; } = null!;
+
+    public int? NombFemi { get; set; }
+
+    public int? NombMasc { get; set; }
+
+    public virtual NomenclatureTypeInscription CodeTypeInscNavigation { get; set; } = null!;
+
+    public virtual EtablissementFicheEtablissement EtablissementFicheEtablissement { get; set; } = null!;
+}
