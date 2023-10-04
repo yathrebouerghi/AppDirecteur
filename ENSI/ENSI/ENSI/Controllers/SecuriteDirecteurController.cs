@@ -37,6 +37,28 @@ namespace ENSI.Controllers
             }
         }
 
+        [HttpGet("login/{login}")]
+        public ActionResult<SecuriteDirecteur> GetDirecteurByLogin(string login)
+        {
+            try
+            {
+                var directeur = _IDirecteur.GetByLogin(login);
+
+                if (directeur != null)
+                {
+                    return Ok(directeur);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "Une erreur interne est survenue : " + ex.Message);
+            }
+        }
+
         [HttpPut("{id}")]
         public IActionResult Update(int id, SecuriteDirecteur model)
         {

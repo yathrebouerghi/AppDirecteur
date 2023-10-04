@@ -1,5 +1,6 @@
 ﻿using ENSI.Interface;
 using ENSI.Models;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -54,5 +55,54 @@ namespace ENSI.Controllers
             return etablissements;
         }
 
+        [HttpGet("typesEtablissements")]
+        public async Task<ActionResult<IEnumerable<NomenclatureTypeEtablissement>>> GetTypeEtablissement()
+        {
+            return await Task.FromResult(_IEtablissement.GetTypeEtabList());
+        }
+        
+        [HttpGet("EtatsEtablissements")]
+        public async Task<ActionResult<IEnumerable<NomenclatureEtatEtablissement>>> GetEtatEtablissement()
+        {
+            return await Task.FromResult(_IEtablissement.GetEtatEtabtList());
+        }
+
+       
+        [HttpGet("gouvernorat")]
+        public async Task<ActionResult<IEnumerable<NomenclatureGouvernorat>>> GetGouvernorat()
+        {
+            return await Task.FromResult(_IEtablissement.GetGouvList());
+        }
+
+
+        [HttpGet("delegation")]
+        public async Task<ActionResult<IEnumerable<NomenclatureDelegation>>> GetDelegation()
+        {
+            return await Task.FromResult(_IEtablissement.GetDeleList());
+        }
+
+        [HttpGet("commune")]
+        public async Task<ActionResult<IEnumerable<NomenclatureCommune>>> GetCommune()
+        {
+            return await Task.FromResult(_IEtablissement.GetCommList());
+        }
+
+        [HttpGet("NiveauEtude")]
+        public async Task<ActionResult<IEnumerable<NomenclatureNiveauEtude>>> GetNiveauEtude()
+        {
+            return await Task.FromResult(_IEtablissement.GetNivEtdList());
+        }
+
+        [HttpGet("Diplomes")]
+        public async Task<ActionResult<IEnumerable<NomenclatureDiplome>>> GetDiplomes()
+        {
+            return await Task.FromResult(_IEtablissement.GetDipList());
+        }
+
+        [HttpGet("SituationFamiliales")]
+        public async Task<ActionResult<IEnumerable<NomenclatureSituationFamiliale>>> GetSituationFamiliales()
+        {
+            return await Task.FromResult(_IEtablissement.GetSitFList());
+        }
     }
 }

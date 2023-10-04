@@ -19,6 +19,13 @@ namespace ENSI.Repository
             return directeur;
         }
 
+        public SecuriteDirecteur GetByLogin(string login)
+        {
+            var user = _dbContext.SecuriteDirecteurs.FirstOrDefault(u => u.Login == login);
+
+            return user;
+        }
+
         public void UpdatePWD(int id, SecuriteDirecteur model)
         {
             var directeur = GetById(id);

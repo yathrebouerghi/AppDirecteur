@@ -39,14 +39,14 @@ namespace ENSI.Controllers
           {
               return NotFound();
           }
-            var nomenclatureEtablissement = await _context.NomenclatureEtablissements.FindAsync(id);
+        var nomenclatureEtablissement = await _context.NomenclatureEtablissements.FindAsync(id);
 
-            if (nomenclatureEtablissement == null)
-            {
-                return NotFound();
-            }
+        if (nomenclatureEtablissement == null)
+        {
+            return NotFound();
+        }
 
-            return nomenclatureEtablissement;
+        return nomenclatureEtablissement;
         }
 
         // PUT: api/NomenclatureEtablissements/5

@@ -65,5 +65,101 @@ namespace ENSI.Repository
                 throw;
             }
         }
+
+        public List<NomenclatureTypeEtablissement> GetTypeEtabList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureTypeEtablissements.ToList();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public List<NomenclatureEtatEtablissement> GetEtatEtabtList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureEtatEtablissements.ToList();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public List<NomenclatureGouvernorat> GetGouvList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureGouvernorats.ToList();
+            }
+            catch
+            {
+                throw;
+            };
+        }
+
+        public List<NomenclatureDelegation> GetDeleList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureDelegations.ToList();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public List<NomenclatureCommune> GetCommList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureCommunes.ToList();
+            }
+            catch
+            {
+                throw;
+            };
+        }
+
+        public List<NomenclatureNiveauEtude> GetNivEtdList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureNiveauEtudes.ToList();
+            }
+            catch
+            {
+                throw;
+            };
+        }
+
+        public List<NomenclatureDiplome> GetDipList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureDiplomes.ToList();
+            }
+            catch
+            {
+                throw;
+            };
+        }
+
+        public List<NomenclatureSituationFamiliale> GetSitFList()
+        {
+            try
+            {
+                return _dbContext.NomenclatureSituationFamiliales.ToList();
+            }
+            catch
+            {
+                throw;
+            };
+        }
     }
 }
