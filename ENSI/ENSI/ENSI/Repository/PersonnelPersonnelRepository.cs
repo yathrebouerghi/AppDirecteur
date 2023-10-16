@@ -77,7 +77,7 @@ namespace ENSI.Repository
             }
         }
 
-        public NomenclatureQualite getqualiteByCode(string codeQualite)
+        public NomenclatureQualite getQualiteByCode(string codeQualite)
         {
             var qualite = _dbContext.NomenclatureQualites.FirstOrDefault(u => u.CodeQual == codeQualite);
 

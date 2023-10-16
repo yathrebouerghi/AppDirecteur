@@ -11,7 +11,7 @@ namespace ENSI.Interface
         public NomenclatureNiveauEtude getNiveauEtdByCode(string NivEtd);
         public NomenclatureSituationFamiliale getSitFByCode(string codeSit);
         public NomenclatureGrade getGradeByCode(string codeGrade);
-        public NomenclatureQualite getqualiteByCode(string codeQualite);
+        public NomenclatureQualite getQualiteByCode(string codeQualite);
         public NomenclatureSituationProfessionel getSitProdByCode(string codeSitP);
         public NomenclatureFonction getFonctionByCode(string codeFonction);
 

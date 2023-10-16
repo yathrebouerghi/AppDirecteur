@@ -8,9 +8,11 @@ using Microsoft.EntityFrameworkCore;
 using ENSI.Models;
 using ENSI.Interface;
 using ENSI.Migrations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ENSI.Controllers
 {
+    
     [Route("api/[controller]")]
     [ApiController]
     public class PersonnelPersonnelsController : ControllerBase
@@ -266,7 +268,7 @@ namespace ENSI.Controllers
         {
             try
             {
-                var qualite = _IPersonnel.getqualiteByCode(codeQualite);
+                var qualite = _IPersonnel.getQualiteByCode(codeQualite);
 
                 if (qualite != null)
                 {
